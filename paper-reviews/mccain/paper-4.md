@@ -1,25 +1,24 @@
 # Paper Report
 
-**Author:** given name + family name
+**Author:** Michael McCain
 
 ## Details
 
-- **Paper Title:** {paper-title}
-- **Paper Authors:** {paper-authors}
+- **Paper Title:** Knowledge Graphs: Data Graphs
+- **Paper Authors:** A. Hogan et al.
 
 ## Report
 
 ### Summary
 
-{summary-text}
+This section goes over the various types of data graphs, some example use cases, and the graph patterns that are the basis of graph query languages.
 
 ### Key Takeaways
 
-1. takeaway
-2. takeaway
-3. takeaway
+1. A primary benefit of using data graphs is that they do not require the hierarchical structuring of data.
+2. You can use `blank nodes` for things that do not have an identifier.
+3. Knowledge graphs can adopt any variety of these data graphs.
 
 ### Questions to Instructor
 
-1. Question 1
-2. Question 2
+1. If KGs can adopt any of these data graphs, are there any measurable requirements that might dictate using one graph model over another?
