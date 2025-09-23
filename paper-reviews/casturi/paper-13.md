@@ -1,25 +1,23 @@
 # Paper Report
 
-**Author:** given name + family name
+**Author:** Shreyas Casturi
 
 ## Details
 
-- **Paper Title:** {paper-title}
-- **Paper Authors:** {paper-authors}
+- **Paper Title:** Knowledge Graphs: Creation and Enrichment
+- **Paper Authors:** Hogan et al.
 
 ## Report
 
 ### Summary
 
-{summary-text}
+This part of the paper deals with the ways in which knowledge graphs are constructed from a variety of different data formats.
 
 ### Key Takeaways
 
-1. takeaway
-2. takeaway
-3. takeaway
+1. Ontology engineering is the step that one takes AFTER the data has been processed/ingested.
+2. The creation of the ontology can happen automatically (ontology learning) or have human-basd methods (such as humans constructing the ontology by hand).
 
 ### Questions to Instructor
+1. I'm curious about how transformers and ANNs do when learning the ontology from the text, as seen in one of the papers I had to review for KCAP. What bottlenecks currently exist?
 
-1. Question 1
-2. Question 2
