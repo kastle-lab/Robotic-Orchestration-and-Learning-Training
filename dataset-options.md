@@ -1,0 +1,6 @@
+- [DROID (Distributed Robot Interaction Dataset)](https://droid-dataset.github.io/) - Task and Trajectory manipulation
+- [Autonomously Constructing Hierarchical Task Networks for Planning and Human-Robot Collaboration](https://scazlab.yale.edu/sites/default/files/files/hayes_icra16.pdf) - Task and path manipulation
+- [RH20T-P: A Primitive-Level Robotic Dataset Towards Composable Generalization Agents](https://sites.google.com/view/rh20t-primitive/main) - Generaliable task (decompostion of big tasks into small primitives)
+- [BridgeData V2](https://rail-berkeley.github.io/bridgedata/) - Scene and Object recognition + manipulation
+- [EpicKitchens](https://epic-kitchens.github.io/2025) - Narrative Annotation of tasks
+- [ALFRED](https://askforalfred.com/) - natural language intruction to task mapping
