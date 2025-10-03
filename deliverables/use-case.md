@@ -8,30 +8,70 @@ Considering these aspects for the current ontological representations of complex
 
 ## Competency Questions
 
-- What set of robots is required to complete `primary goal` _y_?<br>
-- Which robot(s) can perform `task` _z_?<br>
+- What set of `agents` are required to complete `primary goal` _y_?<br>
+- Which `agent` can perform `task` _z_?<br>
+- What `agents` are required to complete `task` _x_? <br>
 
-Bridges Datasets: [Robotic Capabilities]()
+Bridges Datasets: [Droid](https://droid-dataset.github.io/), [LaViA](https://gatech.app.box.com/s/5onzr6sj99jpcsee1sgo7gztpqui4z2p),
+[RH20T-P](https://sites.google.com/view/rh20t-primitive/main)
 
 ---
 
-- What is the sequence of `tasks` required to complete `primary goal` _g_?<br>
+- What is the sequence(`task list`) of `tasks` required to complete `primary goal` _g_?<br>
 - What are the `dependent tasks` for `task` _z_? <br>
+- What `goals` can be achieved from `task` _X_?<br>
+- Which `tasks` share common `dependent tasks` across different `goals`?
 
-Bridges Datasets: [dataset 1](), [dataset 2](), [...]()
+Bridges Datasets: [MOAD](https://www.robot-manipulation.org/nist-moad),
+[ALFRED](https://askforalfred.com/), [EpicKitchens](https://epic-kitchens.github.io/2025), [RH20T-P](https://sites.google.com/view/rh20t-primitive/main)
 
 ---
 
-- Competency Question<br>
+- What `tasks` are decomposable? <br>
+- What `tasks` consist of at least _X_ `tasks`? <br>
+- What `tasks` are the atomic level `tasks`? <br>
+- Which `task(s)` require collaboration between multiple `agents`? <br>
 
-Bridges Datasets: dataset 1, dataset 2, ...
+Bridges Datasets: [RH20T-P](https://sites.google.com/view/rh20t-primitive/main), [DROID](https://droid-dataset.github.io/)
+
+---
+
+- Which `agent` has `priority` to do `task` _z_ if `agent` _A_ and `agent` _B_ are on a collision?<br>
+- What were the `states` of the `agent` following a failed `task`? <br>
+- What is an alternative `path` from `task` _x_ to `task` _y_? <br>
+- What should be the estimated `time` to complete `task` _x_ by `agent` _A_?<br>
+
+Bridges Datasets: [DROID](https://droid-dataset.github.io/), [Workcell manufacturing operations](https://catalog.data.gov/dataset/process-and-robot-data-from-a-two-robot-workcell-representative-performing-representative-), [Robot-World Hand-Eye(s)](https://catalog.data.gov/dataset/data-from-solving-the-robot-world-hand-eyes-calibration-problem-with-iterative-methods-02035)
+
+---
+
+- What are the `classifications`/`categories` that of a set of `objects`? <br>
+
+Bridges Datasets: [Scanned Objects by Google](https://research.google/blog/scanned-objects-by-google-research-a-dataset-of-3d-scanned-common-household-items/)
+, [Princeton Model Net](https://modelnet.cs.princeton.edu/#)
+
+---
+
+- What `objects` are required to complete `task` _x_? <br>
+- What are the `task(s)` that can be achieved by the presence of `object` _o_? <br>
+- What `objects` are required for `goal` _g_? <br>
+
+Bridges Datasets: [BridgeData V2](https://rail-berkeley.github.io/bridgedata/), [EpicKitchens](https://epic-kitchens.github.io/2025), [RH20T-P](https://sites.google.com/view/rh20t-primitive/main), [ALFRED](https://askforalfred.com/)
 
 ---
 
 ## Potential Datasets
 
-1. [Robotic Capabilities]()
-2. [Potential Dataset Name](https://dataset-link.com/)
+1. [LaViA](https://gatech.app.box.com/s/5onzr6sj99jpcsee1sgo7gztpqui4z2p)
+2. [NIST-Manufacturing Objects for Assembly Database (MOAD) ATB dataset](https://www.robot-manipulation.org/nist-moad)
+3. [DROID](https://droid-dataset.github.io/)
+4. [Process and robot data from a two robot workcell representative performing representative manufacturing operations](https://catalog.data.gov/dataset/process-and-robot-data-from-a-two-robot-workcell-representative-performing-representative-)
+5. [Data from: Solving the Robot-World Hand-Eye(s) Calibration Problem with Iterative Methods](https://catalog.data.gov/dataset/data-from-solving-the-robot-world-hand-eyes-calibration-problem-with-iterative-methods-02035)
+6. [EpicKitchens](https://epic-kitchens.github.io/2025)
+7. [ALFRED](https://askforalfred.com/)
+8. [RH20T-P: A Primitive-Level Robotic Dataset Towards Composable Generalization Agents](https://sites.google.com/view/rh20t-primitive/main)
+9. [Autonomously Constructing Hierarchical Task Networks for Planning and Human-Robot Collaboration](https://scazlab.yale.edu/sites/default/files/files/hayes_icra16.pdf)
+10. [BridgeData V2](https://rail-berkeley.github.io/bridgedata/)
 
 ## References
 
