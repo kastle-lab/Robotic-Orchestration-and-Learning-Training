@@ -8,6 +8,8 @@ Considering these aspects for the current ontological representations of complex
 
 ## Competency Questions
 
+**Robot Capability Requirements**: This set of CQs focuses primarily on the identification of robots with respect to their specialization or capabilities for/towards specific tasks or goals.
+
 - What set of `agents` are required to complete `primary goal` _y_?<br>
 - Which `agent` can perform `task` _z_?<br>
 - What `agents` are required to complete `task` _x_? <br>
@@ -16,6 +18,8 @@ Bridges Datasets: [Droid](https://droid-dataset.github.io/), [LaViA](https://gat
 [RH20T-P](https://sites.google.com/view/rh20t-primitive/main)
 
 ---
+
+**Task Analysis and Decomposition**: This set of CQs focuses mainly on task-specific intricacies like dependencies, hierarchies, accounting for both part-of decompositions, sequence/order of tasks to be done, all towards another task or a specific goal.
 
 - What is the sequence(`task list`) of `tasks` required to complete `primary goal` _g_?<br>
 - What are the `dependent tasks` for `task` _z_? <br>
@@ -36,6 +40,8 @@ Bridges Datasets: [RH20T-P](https://sites.google.com/view/rh20t-primitive/main),
 
 ---
 
+**Environment and Execution in Orchestration**: This set of questions focuses on collaboration and orchestration priorities between different robots for similar tasks, within the context of the environment.
+
 - Which `agent` has `priority` to do `task` _z_ if `agent` _A_ and `agent` _B_ are on a collision?<br>
 - What were the `states` of the `agent` following a failed `task`? <br>
 - What is an alternative `path` from `task` _x_ to `task` _y_? <br>
@@ -44,6 +50,8 @@ Bridges Datasets: [RH20T-P](https://sites.google.com/view/rh20t-primitive/main),
 Bridges Datasets: [DROID](https://droid-dataset.github.io/), [Workcell manufacturing operations](https://catalog.data.gov/dataset/process-and-robot-data-from-a-two-robot-workcell-representative-performing-representative-), [Robot-World Hand-Eye(s)](https://catalog.data.gov/dataset/data-from-solving-the-robot-world-hand-eyes-calibration-problem-with-iterative-methods-02035)
 
 ---
+
+**Object/Environment Analysis**: This set of questions focuses on datasets of objects and environmental factors that would be relevant to the task at hand.
 
 - What are the `classifications`/`categories` that of a set of `objects`? <br>
 
