@@ -3,7 +3,7 @@
 What entities you think would exist in your graph?
 
 - **Capability**
-  - <u>**Rationale**</u>: Specifications to differentiate and define an agent is capable of doing.
+  - <u><b>Rationale</b></u>: Specifications to differentiate and define an agent is capable of doing.
   - <u>**Connected Pattern**</u>: [role-dependent-name](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/role-dependent-name),
   - <u>**Source Dataset(s)**</u>: [Droid](https://droid-dataset.github.io/)
 
