@@ -9,10 +9,10 @@ What entities you think would exist in your graph?
 
 ---
 
-- **Key Notion**
+- **Agent**
   - <u>**Rationale**</u>: rationale
-  - <u>**Connected Pattern**</u>: pattern name (pattern source)
-  - <u>**Source Dataset(s)**</u>: dataset n, dataset n+1
+  - <u>**Connected Pattern**</u>: [agent-role](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/agent-role/agent-role-pattern.pdf)
+  - <u>**Source Dataset(s)**</u>: [RH20T-Ps](https://sites.google.com/view/rh20t-primitive/main)
 
 ---
 
@@ -23,7 +23,35 @@ What entities you think would exist in your graph?
 
 ---
 
-## Identified Key Notions and Associated Potential MODL Patterns
+# Identified Key Notions and Associated Potential MODL Patterns
+
+## Chris
+
+- Tasks
+- Goal
+- Spatial
+- Provenance
+
+## Susan
+
+- Namestub
+- Events
+- Environment
+- Temporal
+
+## Shreyas
+
+- Categorization
+- Environment
+- Objects
+
+## Michael
+
+- Provenance
+- Archetype
+- Agents
+- States
+- Capabilities
 
 ### Agents
 
