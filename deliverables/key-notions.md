@@ -16,6 +16,35 @@ What entities you think would exist in your graph?
 
 ---
 
+- **Event**
+  - <u><b>Rationale:</b></u> Capturing the specific **things that just happened** at a certain point of time, like when robot gripper confirms it has successfully picked up its target. This event is the trigger that causes the robot's State to change from executing to idle, signaling the orchestrator that the step is complete and it can now issue the next Task in a sequence.
+  - <u><b>Connected Pattern:</u></b> [event](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/event/event-pattern.pdf), [description-situation](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/description-situation/description-situation-pattern.pdf),
+ [causal-event](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/causal-event/causal-event-pattern.pdf), [recurrent-event](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/recurrent-event/recurrent-event-pattern.pdf), [reporting-event](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/reporting-event/reporting-event-pattern.pdf)  
+  - <u><b>Source Dataset(s):</b></u> TBD
+
+---
+
+- **Environment**
+  - <u><b>Rationale:</b></u> Provide shared situational awareness for all Agents telling the orchestrator where the Agents can go, where Objects are, and what areas are restricted which is essential for planning safe and successful Tasks.  
+  - <u><b>Connected Pattern:</u></b> [observation](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/observation/observation-pattern.pdf), [part-whole](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/part-whole/part-whole-pattern.pdf)
+  - <u><b>Source Dataset(s):</b></u> TBD
+
+---
+
+- **Temporal**
+  - <u><b>Rationale:</b></u> It's a **when**(timestamp) for recording Events and provides the **how long**(duration) for scheduling Tasks, so you have perfect timeline of everything that happened.
+  - <u><b>Connected Pattern:</u></b> [temporal-extent](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/temporal-extent/temporal-extent-pattern.pdf)
+  - <u><b>Source Dataset(s):</b></u> TBD
+
+---
+
+- **Namestub**
+  - <u><b>Rationale:</b></u> : It's basically a **nametag** pattern. It's a simple, reusable way to give anything (like an Agent, Task, or Object) a human-readable name.
+  - <u><b>Connected Pattern:</u></b> [name-stub](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/name-stub/name-stub-pattern.pdf)
+  - <u><b>Source Dataset(s):</b></u> TBD
+
+---
+
 - **Key Notion**
   - <u>**Rationale**</u>: rationale
   - <u>**Connected Pattern**</u>: pattern name (pattern source)
@@ -33,7 +62,6 @@ What entities you think would exist in your graph?
 - Provenance
 
 ## Susan
-
 - Namestub
 - Events
 - Environment
