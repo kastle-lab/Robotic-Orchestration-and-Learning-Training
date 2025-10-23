@@ -20,14 +20,15 @@ What entities you think would exist in your graph?
   - <u><b>Rationale:</b></u> Capturing the specific **things that just happened** at a certain point of time, like when robot gripper confirms it has successfully picked up its target. This event is the trigger that causes the robot's State to change from executing to idle, signaling the orchestrator that the step is complete and it can now issue the next Task in a sequence.
   - <u><b>Connected Pattern:</u></b> [event](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/event/event-pattern.pdf), [description-situation](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/description-situation/description-situation-pattern.pdf),
  [causal-event](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/causal-event/causal-event-pattern.pdf), [recurrent-event](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/recurrent-event/recurrent-event-pattern.pdf), [reporting-event](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/reporting-event/reporting-event-pattern.pdf)  
-  - <u><b>Source Dataset(s):</b></u> TBD
+  - <u><b>Source Dataset(s):</b></u> [Droid](https://droid-dataset.github.io/), [RH20T-P](https://sites.google.com/view/rh20t-primitive/main), [BridgeData V2](https://rail-berkeley.github.io/bridgedata/)
 
 ---
 
 - **Environment**
   - <u><b>Rationale:</b></u> Provide shared situational awareness for all Agents telling the orchestrator where the Agents can go, where Objects are, and what areas are restricted which is essential for planning safe and successful Tasks.  
   - <u><b>Connected Pattern:</u></b> [observation](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/observation/observation-pattern.pdf), [part-whole](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/part-whole/part-whole-pattern.pdf)
-  - <u><b>Source Dataset(s):</b></u> TBD
+  - <u><b>Source Dataset(s):</b></u> [Scanned Objects by Google](https://research.google/blog/scanned-objects-by-google-research-a-dataset-of-3d-scanned-common-household-items/)
+, [Princeton Model Net](https://modelnet.cs.princeton.edu/#), [NIST-Manufacturing Objects for Assembly Database (MOAD) ATB dataset](https://www.robot-manipulation.org/nist-moad), [EpicKitchens](https://epic-kitchens.github.io/2025), [DROID](https://droid-dataset.github.io/)
 
 ---
 
