@@ -1,7 +1,5 @@
 # Key Notions
 
-What entities you think would exist in your graph?
-
 - **Capability**
   - <u><b>Rationale</b></u>: Specifications to differentiate and define what actions an agent can perform (E.g., Grab, Push, Pull, Lift, Travel, Etc.).
   - <u>**Connected Pattern**</u>: [role-dependent-name](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/role-dependent-name),
@@ -17,9 +15,9 @@ What entities you think would exist in your graph?
 ---
 
 - **Provenance**
-  - <u>**Rationale**</u>: To identify which multi-agent (MAS) system a robotic agent originates from.
+  - <u>**Rationale**</u>: To identify which multi-agent (MAS) system a robotic agent originates from. Captures the origin, role, and contextual metadata associated with architype and goal.
   - <u>**Connected Pattern**</u>: [provenance](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/provenance/provenance-pattern.pdf)
-  - <u>**Source Dataset(s)**</u>: TBD
+  - <u>**Source Dataset(s)**</u>: [Droid](https://droid-dataset.github.io/), [RH20T-P](https://sites.google.com/view/rh20t-primitive/main)
 
 ---
 
@@ -38,113 +36,90 @@ What entities you think would exist in your graph?
 
 ---
 
-- **Key Notion**
-  - <u>**Rationale**</u>: rationale
-  - <u>**Connected Pattern**</u>: pattern name (pattern source)
-  - <u>**Source Dataset(s)**</u>: dataset n, dataset n+1
+- **Event**
+  - <u><b>Rationale:</b></u> Capturing the specific **things that just happened** at a certain point of time, like when robot gripper confirms it has successfully picked up its target. This event is the trigger that causes the robot's State to change from executing to idle, signaling the orchestrator that the step is complete and it can now issue the next Task in a sequence.
+  - <u><b>Connected Pattern:</u></b> [event](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/event/event-pattern.pdf), [description-situation](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/description-situation/description-situation-pattern.pdf),
+    [causal-event](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/causal-event/causal-event-pattern.pdf), [recurrent-event](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/recurrent-event/recurrent-event-pattern.pdf), [reporting-event](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/reporting-event/reporting-event-pattern.pdf)
+  - <u><b>Source Dataset(s):</b></u> [Droid](https://droid-dataset.github.io/), [RH20T-P](https://sites.google.com/view/rh20t-primitive/main), [BridgeData V2](https://rail-berkeley.github.io/bridgedata/)
 
 ---
 
-# Identified Key Notions and Associated Potential MODL Patterns
+- **Environment**
+  - <u><b>Rationale:</b></u> Provide shared situational awareness for all Agents telling the orchestrator where the Agents can go, where Objects are, and what areas are restricted which is essential for planning safe and successful Tasks.
+  - <u><b>Connected Pattern:</u></b> [observation](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/observation/observation-pattern.pdf), [part-whole](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/part-whole/part-whole-pattern.pdf)
+  - <u><b>Source Dataset(s):</b></u> [Scanned Objects by Google](https://research.google/blog/scanned-objects-by-google-research-a-dataset-of-3d-scanned-common-household-items/)
+    , [Princeton Model Net](https://modelnet.cs.princeton.edu/#), [NIST-Manufacturing Objects for Assembly Database (MOAD) ATB dataset](https://www.robot-manipulation.org/nist-moad), [EpicKitchens](https://epic-kitchens.github.io/2025), [DROID](https://droid-dataset.github.io/)
 
-## Chris
+---
 
-- Tasks
-- Goal
-- Spatial
-- Provenance
+- **Temporal**
+  - <u><b>Rationale:</b></u> It's a **when**(timestamp) for recording Events and provides the **how long**(duration) for scheduling Tasks, so you have perfect timeline of everything that happened.
+  - <u><b>Connected Pattern:</u></b> [temporal-extent](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/temporal-extent/temporal-extent-pattern.pdf)
+  - <u><b>Source Dataset(s):</b></u> TBD
 
-## Susan
+---
 
-- Namestub
-- Events
-- Environment
-- Temporal
+- **Namestub**
+  - <u><b>Rationale:</b></u> : It's basically a **nametag** pattern. It's a simple, reusable way to give anything (like an Agent, Task, or Object) a human-readable name.
+  - <u><b>Connected Pattern:</u></b> [name-stub](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/name-stub/name-stub-pattern.pdf)
+  - <u><b>Source Dataset(s):</b></u> TBD
 
-## Shreyas
+---
 
-- Categorization
-- Environment
-- Objects
+- **Task**
 
-## Michael
+  - <u>**Rationale**</u>: Represents any atomic unit of work to be performed by our agents.
+  - <u>**Connected Pattern**</u>: [trajectory](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/trajectory/trajectory-pattern.pdf), [sequence](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/sequence/sequence-pattern.pdf)
+  - <u>**Source Dataset(s)**</u>: [ALFRED](https://askforalfred.com/), [RH20T-P](https://sites.google.com/view/rh20t-primitive/main)
 
-- Provenance
-- Archetype
-- Agents
-- States
-- Capabilities
+---
 
-### Agents
+- **Goal**
 
-- [agent-role](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/agent-role/agent-role-pattern.pdf)
+  - <u>**Rationale**</u>: Represents the desired outcome or terminal state toward which one or more tasks are directed; Anchors decomposition hierarchies and provides semantics for task sequencing order
+  - <u>**Connected Pattern**</u>: [description-situation](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/description-situation/description-situation-pattern.pdf), [spatiotemporal-extent](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/spatiotemporal-extent/spatiotemporal-extent-pattern.pdf), [sequence](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/sequence/sequence-pattern.pdf), [event](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/event/event-pattern.pdf)
+  - <u>**Source Dataset(s)**</u>: [BridgeData V2](https://rail-berkeley.github.io/bridgedata/), [EpicKitchens](https://epic-kitchens.github.io/2025), [RH20T-P](https://sites.google.com/view/rh20t-primitive/main), [ALFRED](https://askforalfred.com/)
 
-### Capabilities
+---
 
-- [role-dependent-name](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/role-dependent-name)
+- **Spatial**
+  - <u>**Rationale**</u>: Captures the positional and relational information that constrains or enables the execution of tasks towards a goal within an avilable environment.
+  - <u>**Connected Pattern**</u>: [spatial-extent](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/spatial-extent/spatial-extent-pattern.pdf), [spatial-object](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/spatial-object/spatial-object-pattern.pdf)
+  - <u>**Source Dataset(s)**</u>: [Droid](https://droid-dataset.github.io/), [RH20T-P](https://sites.google.com/view/rh20t-primitive/main), [BridgeData V2](https://rail-berkeley.github.io/bridgedata/)
 
-### Objects
+---
 
-- [description-situation](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/description-situation/description-situation-pattern.pdf)
+- **Categorization**
 
-- [spatial-object](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/spatial-object/spatial-object-pattern.pdf)
+  - <u><b>Rationale</b></u>: Specifications to differentiate _classes_ of objects that are present within an environment. This can range from the non-robot objects to the robots themselves, though the expectation is that this is for the non-robot objects.
+  - <u>**Connected Pattern**</u>:
 
-### Events
+    - One major pattern that may suffice is the _explicit typing_ ODP, because one is describing an object by its _type_ or _category_: [Explicit Typing](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/explicit-typing).
 
-- [event](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/event/event-pattern.pdf)
+    - If one wants to focus on categories without explicitly focusing on objects, the _taxonomy alignment pattern_ may fit here, as it describes a concept (i.e, something like a category), with a description and a definition. One issue is that this pattern is too abstract, relying on a Mapping relation, which wouldn't be needed for the category. Nonetheless, it is worth mentioning: [Taxonomy Alignment Pattern](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/taxonomy-alignment).
 
-- [description-situation](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/description-situation/description-situation-pattern.pdf)
+    - Finally, if you assume a category may have a specific type associated with it, then you can use the _identifier_ pattern, but this is probably not the most appropriate: [Identifier Pattern](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/identifier).
 
-- [causal-event](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/causal-event/causal-event-pattern.pdf)
+  - <u>**Source Dataset(s)**</u>: [Princeton Model Net](https://modelnet.cs.princeton.edu/#)
 
-- [recurrent-event](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/recurrent-event/recurrent-event-pattern.pdf)
+---
 
-### Task
+- **Environment**
 
-- [sequence](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/sequence/sequence-pattern.pdf)
+  - <u><b>Rationale</b></u>: Specifications to differentiate what is present/constitutes the environment in which a task is set/in which a robot(s) operates.
+  - <u>**Connected Pattern**</u>:
+    - Because an environment at its core consists of objects/things (zero, one, or many), all potentially related to one another, the [Part-whole (contextualized or not)](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/part-whole) may be the most appropriate.
+    - Additionally, because an environment can consist of a list of objects, each with their descriptions, and a particular State, a highly modified integration of the _state transition_ and _sequence_ patterns may be appropriate. [State transition](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/state-transition), [Sequence](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/sequence).
+  - <u>**Source Dataset(s)**</u>: [Droid](https://droid-dataset.github.io/)
 
-### State
+---
 
-- [state-transition](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/state-transition/state-transition-pattern.pdf)
+- **Objects**
 
-### Goals
+  - <u><b>Rationale</b></u>: Specifications to define objects in an environment, potentially including the robots themselves.
 
-- See tasks
+  - <u>**Connected Pattern**</u>: Most likely the _spatial object_ or even the _spatiotemporal extent_ role would capture the qualities of an object, namely, that it occupies a position in space and time. [Spatial object](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/spatial-object), [Spatialtemporal extent](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/spatiotemporal-extent)
 
-### Environment
-
-- See events
-- See objects
-- [observation](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/observation/observation-pattern.pdf)
-
-### Priority
-
-- TBD
-
-### Classification/Category
-
-- TBD
-
-### Archetype (role)
-
-- [explicit-typing](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/explicit-typing/explicit-typing-pattern.pdf)
-
-- [participant-role](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/participant-role/participant-role-pattern.pdf)
-
-### Temporal
-
-- [temporal-extent](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/temporal-extent/temporal-extent-pattern.pdf)
-
-### Spatial
-
-- [spatial-extent](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/spatial-extent/spatial-extent-pattern.pdf)
-
-- [spatiotemporal-extent](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/spatiotemporal-extent/spatiotemporal-extent-pattern.pdf)
-
-### Other
-
-- [name-stub](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/name-stub/name-stub-pattern.pdf)
-
-- [provenance](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/provenance/provenance-pattern.pdf)
+  - <u>**Source Dataset(s)**</u>: [Scanned Objects by Google](https://research.google/blog/scanned-objects-by-google-research-a-dataset-of-3d-scanned-common-household-items/), [BridgeData V2](https://rail-berkeley.github.io/)
 
 ---
