@@ -3,16 +3,38 @@
 What entities you think would exist in your graph?
 
 - **Capability**
-  - <u><b>Rationale</b></u>: Specifications to differentiate and define an agent is capable of doing.
+  - <u><b>Rationale</b></u>: Specifications to differentiate and define what actions an agent can perform (E.g., Grab, Push, Pull, Lift, Travel, Etc.).
   - <u>**Connected Pattern**</u>: [role-dependent-name](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/role-dependent-name),
-  - <u>**Source Dataset(s)**</u>: [Droid](https://droid-dataset.github.io/)
+  - <u>**Source Dataset(s)**</u>: [Droid](https://droid-dataset.github.io/), [LaViA (no longer accessible)](https://gatech.app.box.com/s/5onzr6sj99jpcsee1sgo7gztpqui4z2p), [RH20T-Ps](https://sites.google.com/view/rh20t-primitive/main)
 
 ---
 
 - **Agent**
-  - <u>**Rationale**</u>: rationale
-  - <u>**Connected Pattern**</u>: [agent-role](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/agent-role/agent-role-pattern.pdf)
+  - <u>**Rationale**</u>: A default representation of an entity (robotic) capable of interacting with its environment.
+  - <u>**Connected Pattern**</u>: [agent-role](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/agent-role/agent-role-pattern.pdf), [OntoPret]()
   - <u>**Source Dataset(s)**</u>: [RH20T-Ps](https://sites.google.com/view/rh20t-primitive/main)
+
+---
+
+- **Provenance**
+  - <u>**Rationale**</u>: To identify which multi-agent (MAS) system a robotic agent originates from.
+  - <u>**Connected Pattern**</u>: [provenance](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/provenance/provenance-pattern.pdf)
+  - <u>**Source Dataset(s)**</u>: TBD
+
+---
+
+- **Archetype**
+  - <u>**Rationale**</u>: Representing the thematic capabilities of a robotic agent (E.g., Explorer, Hauler, Designer, Painter, etc.).
+  - <u>**Connected Pattern**</u>: [participant-role](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/participant-role/participant-role-pattern.pdf), [OntoPret]()
+  - <u>**Source Dataset(s)**</u>: TBD
+
+---
+
+- **State**
+  - <u>**Rationale**</u>: Representing the state, state transitions, and state space of an agent. Useful for predicting and correcting actions, as well as identifying deviations.
+  - <u>**Connected Pattern**</u>: [state-transition](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/state-transition/state-transition-pattern.pdf)
+  - <u>**Source Dataset(s)**</u>: [Droid](https://droid-dataset.github.io/), [LaViA](https://gatech.app.box.com/s/5onzr6sj99jpcsee1sgo7gztpqui4z2p),
+    [RH20T-P](https://sites.google.com/view/rh20t-primitive/main)
 
 ---
 
