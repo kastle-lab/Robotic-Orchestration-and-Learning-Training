@@ -37,7 +37,7 @@
 ---
 
 - **Event**
-  - <u><b>Rationale:</b></u> Capturing the specific **things that just happened** at a certain point of time, like when robot gripper confirms it has successfully picked up its target. This event is the trigger that causes the robot's State to change from executing to idle, signaling the orchestrator that the step is complete and it can now issue the next Task in a sequence.
+  - <u><b>Rationale:</b></u> Capturing the specific things that just happened at a certain point of time, like when robot gripper confirms it has successfully picked up its target. The action is the trigger that causes the robot's State to change from executing to idle.
   - <u><b>Connected Pattern:</u></b> [event](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/event/event-pattern.pdf), [description-situation](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/description-situation/description-situation-pattern.pdf),
     [causal-event](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/causal-event/causal-event-pattern.pdf), [recurrent-event](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/recurrent-event/recurrent-event-pattern.pdf), [reporting-event](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/reporting-event/reporting-event-pattern.pdf)
   - <u><b>Source Dataset(s):</b></u> [Droid](https://droid-dataset.github.io/), [RH20T-P](https://sites.google.com/view/rh20t-primitive/main), [BridgeData V2](https://rail-berkeley.github.io/bridgedata/)
