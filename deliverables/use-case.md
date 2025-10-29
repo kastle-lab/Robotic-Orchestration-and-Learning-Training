@@ -2,9 +2,9 @@
 
 ## Narrative
 
-Domains that rely heavily on robotics have shown an increasing interest in autonomous systems that are collaborative, intelligent, and capable of reasoning [1, 2]. In pursuit of these interests, a standard method for increasing autonomy among robots [2] and enabling collaboration is the use of knowledge representation in the form of ontologies [3] and knowledge graphs [2, 4]. Due to the relatively recent focus on achieving these ambitious and complex autonomous systems, there are many competing approaches, especially in the context of task planning [1, 2, 4, 5, 6, 7]. However, many of these approaches vary in terms of ontology design or methodology, but do use OWL as the primary language for semantic representation [2].
+Domains that rely heavily on robotics have shown an increasing interest in autonomous systems that are collaborative, intelligent, and capable of reasoning [1, 2, 3]. In pursuit of these interests, a standard method for increasing autonomy among robots [2] and enabling collaboration is the use of knowledge representation in the form of ontologies [4] and knowledge graphs (KG) [2, 3, 5]. Due to the relatively recent focus on achieving these ambitious and complex autonomous systems, there are many competing approaches, especially in the context of task planning [1, 2, 5, 6, 7, 8]. However, these approaches vary in terms of ontology design or methodology, but do use the World Wide Web Consortium (W3C) consortium’s Web Ontology Language (OWL) [9] as the primary logic-based language for semantic representation. Unfortunately, as highlighted in [2], many of these ontologies lack reusability and do not meet the need for the confluence of existing ontologies. Considering these aspects for the current ontological representations of complex autonomous systems, we want to engineer an ontology that could enable these multi-agent systems [8] to be governed and commanded by an AI Orchestrator capable of understanding its environment, decomposing goals into atomic subtasks, and assigning agents to complete these tasks based on their capabilities. This ontology would be designed using state-of-the-art best practices to ensure modularity through the use of ontological design patterns (ODPs) and reusability [9].
 
-Considering these aspects for the current ontological representations of complex autonomous systems, we want to engineer an ontology that could enable these multi-agent systems [8] to be governed and commanded by an AI Orchestrator capable of understanding its environment, decomposing goals into atomic subtasks, and assigning agents to complete these tasks based on their capabilities. This ontology would be designed using state-of-the-art best practices to ensure modularity through the use of ontological design patterns (ODPs) and reusability [9].
+Considering these aspects for the current ontological representations of complex autonomous systems, we want to engineer an ontology that could enable these multi-agent systems (MAS) [3] to be governed and commanded by an AI Orchestrator capable of the following: understanding its environment, decomposing goals into atomic subtasks, agent assignment based on capabilities, and status verification. More importantly, it would be designed to be general enough to support reusability and allow for adaptation to the domain of need. This ontology would be designed using state-of-the-art (SOTA) best practices to ensure modularity and reusability [10, 11] through the use of ontological design patterns (ODPs) [12]. This would fill two needs. The first would be to provide an ontology that allows for more complex autonomous MAS. The second is the demand for a reusable ontology that facilitates the merging of existing ontologies across domains that utilize these MAS.
 
 ## Competency Questions
 
@@ -83,20 +83,26 @@ Bridges Datasets: [BridgeData V2](https://rail-berkeley.github.io/bridgedata/), 
 
 ## References
 
-[1] A. Olivares-Alarcos, S. Foix, S. Borgo, and None Guillem Alenyà, “OCRA – An ontology for collaborative robotics and adaptation,” Computers in Industry, vol. 138, pp. 103627–103627, Feb. 2022, doi: https://doi.org/10.1016/j.compind.2022.103627
+[1] A. Olivares-Alarcos, S. Foix, S. Borgo, N. G. Alenyà, Ocra – an ontology for collaborative robotics and adaptation, Computers in Industry 138 (2022) 103627–103627. doi:10.1016/j.compind.2022.103627.
 
-[2] E. Aguado, V. Gomez, M. Hernando, C. Rossi, and R. Sanz, “A survey of ontology-enabled processes for dependable robot autonomy,” Frontiers in Robotics and AI, vol. 11, Jul. 2024, doi: https://doi.org/10.3389/frobt.2024.1377897
+[2] E. Aguado, V. Gomez, M. Hernando, C. Rossi, R. Sanz, A survey of ontology-enabled processes for dependable robot autonomy, Frontiers in Robotics and AI 11 (2024). doi:10.3389/frobt.2024.1377897.
 
-[3] A. Ricci, M. Piunti, and M. Viroli. Environment programming in multi-agent systems: an artifact-based perspective. Autonomous Agents and Multi-Agent Systems, 23:158–192, 2011.
+[3] H. Du, S. Thudumu, R. Vasa, K. Mouzakis, A survey on context-aware multi-agent systems: Techniques, challenges and future directions, 2024. URL: https://arxiv.org/abs/2402.01968v2.
 
-[4] H. Li et al., “IEEE Standard for Autonomous Robotics (AuR) Ontology,” Sep. 2021, doi: https://doi.org/10.1109/ieeestd.2022.9774339.
+[4] A. Ricci, M. Piunti, M. Viroli, Environment programming in multi-agent systems: an artifact-based perspective, Autonomous Agents and Multi-Agent Systems 23 (2010) 158–192. doi:10.1007/s10458-010-9140-7.
 
-[5] X. Sun, Y. Zhang, and J. M. Chen, “RTPO: A Domain Knowledge Base for Robot Task Planning,” vol. 8, no. 10, pp. 1105–1105, Oct. 2019, doi: https://doi.org/10.3390/electronics8101105.
+[5] H. Li, P. Goncalves, V. Ragavan, A. Olivares-Alarcos, E. M. Barreto, D. Beβler, J. Bermejo, S. Borgo, A. Chibani, J. Carbonera, M. Diab, S. Fiorini, A. Gyrard, M. Habib, A. Khamis, K. Moulouel, H. Nakawala, B. Nguyen, C. Nowak, J. Olszewska, E. Pignaton, E. Prestes, J. Quintas, S. Redfield, R. Sanz, C. Schlenoff, E. Tosello, Ieee standard for autonomous robotics (aur) ontology (2021). URL: https://ieeexplore.ieee.org/document/9774339?utm_source=chatgpt.com. doi:10.1109/ieeestd. 2022.9774339.
 
-[6] C. Z. Sprenger, J. Antonio, and N. U. Baier, “ORPP—An Ontology for Skill-Based Robotic Process Planning in Agile Manufacturing,” Electronics, vol. 13, no. 18, pp. 3666–3666, Sep. 2024, doi: https://doi.org/10.3390/electronics13183666.
+[6] X. Sun, Y. Zhang, J. M. Chen, Rtpo: A domain knowledge base for robot task planning 8 (2019) 1105–1105. doi:10.3390/electronics8101105.
 
-[7] L. Kinder and T. Käfer, “Static and Adaptive Planning with WoT TD by Generating Python Objects as Intermediary Representations Using Large Language Models,” Lecture notes in computer science, pp. 256–273, Jan. 2025, doi: https://doi.org/10.1007/978-3-031-78955-7_21
+[7] C. Z. Sprenger, J. Antonio, N. U. Baier, Orpp—an ontology for skill-based robotic process planning in agile manufacturing, Electronics 13 (2024) 3666–3666. URL: https://www.mdpi.com/2079-9292/13/18/3666. doi:10.3390/electronics13183666.
 
-[8] H. Du, S. Thudumu, R. Vasa, and K. Mouzakis, “A Survey on Context-Aware Multi-Agent Systems: Techniques, Challenges and Future Directions,” arXiv.org, 2024. Available: https://arxiv.org/abs/2402.01968v2. [Accessed: Feb. 26, 2025]
+[8] L. Kinder, T. Käfer, Static and adaptive planning with wot td by generating python objects as intermediary representations using large language models, Lecture notes in computer science (2025) 256–273. doi:10.1007/978-3-031-78955-7_21.
 
-[9] A. Hogan et al., “Knowledge Graphs,” ACM Computing Surveys, vol. 54, no. 4, pp. 1–37, May 2022, doi: https://doi.org/10.1145/3447772
+[9] W. W. W. C. (W3C), Owl 2 web ontology language primer (second edition), URL: https://www.w3.org/TR/2012/REC-owl2-primer-20121211/.
+
+[10] C. Shimizu, Q. Hirt, P. Hitzler, Modl: A modular ontology design library, 2019. URL: https://arxiv.org/abs/1904.05405.
+
+[11] C. Shimizu, K. Hammar, P. Hitzler, Modular ontology modeling, Semantic Web (2022) 1–31. doi:https://doi.org/10.3233/sw-222886.
+
+[12] A. Hogan, E. Blomqvist, M. Cochez, C. D’amato, G. D. Melo, C. Gutierrez, S. Kirrane, J. E. L. Gayo, R. Navigli, S. Neumaier, A.-C. N. Ngomo, A. Polleres, S. M. Rashid, A. Rula, L. Schmelzeisen, J. Sequeda, S. Staab, A. Zimmermann, Knowledge graphs, ACM Computing Surveys 54 (2022) 1–37. doi:10.1145/3447772.
