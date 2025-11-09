@@ -126,7 +126,13 @@
 
 - **Role**
 
-  - <u><b>Rationale</b></u>: Used classify an agent’s immediate characteristics. To be distinct from the Archetype class as that is instead more representative of the culmination of all the characteristics an agent has based on their capabilities (i.e., a set of skills). The specific set of those capabilities gives an agent an archetype, allowing it to fill many roles until it is assigned to an immediate task, where it will fulfill a specific role.
+  - <u><b>Rationale</b></u>: Used to represent the immediate characteristics and participation of a SpatialThing's in a specific context.
+
+    Requires:
+
+    - Role – Kind of participation.
+    - Filler - specifics of what is performing a role.
+    - Binding - contextual association between the role-filler and the context.
 
   - <u>**Connected Pattern**</u>: [participant-role-pattern](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/participant-role/participant-role-pattern.pdf), [agent-role-pattern](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/agent-role/agent-role-pattern.pdf), [role-dependent-name](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/role-dependent-name/role-dependent-name-pattern.pdf)
 
