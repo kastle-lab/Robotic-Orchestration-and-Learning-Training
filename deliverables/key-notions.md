@@ -139,3 +139,11 @@
   - <u>**Source Dataset(s)**</u>: TBD
 
 ---
+
+- **RoleParticipation**
+
+  - <u><b>Rationale</b></u>: contextual association between the role-filler and the context.
+
+  - <u>**Connected Pattern**</u>: [participant-role-pattern](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/participant-role/participant-role-pattern.pdf), [agent-role-pattern](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/agent-role/agent-role-pattern.pdf), [role-dependent-name](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/role-dependent-name/role-dependent-name-pattern.pdf)
+
+  - <u>**Source Dataset(s)**</u>: TBD
