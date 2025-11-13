@@ -133,3 +133,41 @@
   - <u>**Source Dataset(s)**</u>: TBD
 
 ---
+
+- **Feature**
+
+  - <u><b>Rationale</b></u>: A spatial thing that only exists as part of a host object (i.e., holes, color, bumps)
+
+  - <u>**Connected Pattern**</u>: [Spatial-Object-Pattern](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/spatial-object/spatial-object-pattern.pdf)
+
+  - <u>**Source Dataset(s)**</u>: [Scanned Objects by Google](https://research.google/blog/scanned-objects-by-google-research-a-dataset-of-3d-scanned-common-household-items/), [BridgeData V2](https://rail-berkeley.github.io/)
+
+  ***
+
+- **Geometry**
+
+  - <u><b>Rationale</b></u>: The geometry data of a spatial thing (i.e., mesh data, dimensions)
+
+  - <u>**Connected Pattern**</u>: [Spatial-Object-Pattern](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/spatial-object/spatial-object-pattern.pdf)
+
+  - <u>**Source Dataset(s)**</u>: [Scanned Objects by Google](https://research.google/blog/scanned-objects-by-google-research-a-dataset-of-3d-scanned-common-household-items/), [BridgeData V2](https://rail-berkeley.github.io/)
+
+---
+
+- **RelationInstance**
+
+  - <u><b>Rationale</b></u>: Through reification, typecasting properties into subproperties of a spatial thing (i.e., component, member, place, and feature types).
+
+  - <u>**Connected Pattern**</u>: [Winston's Part Whole](https://ceur-ws.org/Vol-2195/pattern_paper_1.pdf)
+
+  - <u>**Source Dataset(s)**</u>: All
+
+---
+
+- **SpatialThing**
+
+  - <u><b>Rationale</b></u>: A physical thing that exists in time and space.
+
+  - <u>**Connected Pattern**</u>: [spatial-object-pattern](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/spatial-object/spatial-object-pattern.pdf)
+
+  - <u>**Source Dataset(s)**</u>: All
