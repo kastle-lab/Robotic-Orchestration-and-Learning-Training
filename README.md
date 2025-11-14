@@ -29,7 +29,10 @@ The deliverables are structured as follows.
    This directory includes the schema diagrams for each constructed pattern.
 4. **Meeting-Minutes** \
    This directory contains the weekly meeting logs, which outline the discussion points and action items.
-5. **Paper-Reviews** \
-   This directory contains the paper reviews of each group member from the first half of the semester.
-6. **Knowledge-Engineering-Presentation-Final** \
+5. **Knowledge-Engineering-Presentation-Final** \
    The midterm presentation.
+
+### Other Contents
+
+1. **Paper-Reviews** \
+   This directory contains the paper reviews of each group member from the first half of the semester.
