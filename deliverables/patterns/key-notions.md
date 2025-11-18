@@ -89,16 +89,13 @@
 
 ---
 
-- **Categorization**
+- **Category**
 
-  - <u><b>Rationale</b></u>: Specifications to differentiate _classes_ of objects that are present within an environment. This can range from the non-robot objects to the robots themselves, though the expectation is that this is for the non-robot objects.
+  - <u><b>Rationale</b></u>: Specifications to differentiate Spatial Things that are present within an environment.
+
   - <u>**Connected Pattern**</u>:
 
     - One major pattern that may suffice is the _explicit typing_ ODP, because one is describing an object by its _type_ or _category_: [Explicit Typing](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/explicit-typing).
-
-    - If one wants to focus on categories without explicitly focusing on objects, the _taxonomy alignment pattern_ may fit here, as it describes a concept (i.e, something like a category), with a description and a definition. One issue is that this pattern is too abstract, relying on a Mapping relation, which wouldn't be needed for the category. Nonetheless, it is worth mentioning: [Taxonomy Alignment Pattern](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/taxonomy-alignment).
-
-    - Finally, if you assume a category may have a specific type associated with it, then you can use the _identifier_ pattern, but this is probably not the most appropriate: [Identifier Pattern](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/identifier).
 
   - <u>**Source Dataset(s)**</u>: [Princeton Model Net](https://modelnet.cs.princeton.edu/#)
 
@@ -114,12 +111,59 @@
 
 ---
 
-- **Objects**
+- **Object**
 
-  - <u><b>Rationale</b></u>: Specifications to define objects in an environment, potentially including the robots themselves.
+  - <u><b>Rationale</b></u>: Specifications to define a non-autonomous Spatial Thing (not functional by itself).
 
   - <u>**Connected Pattern**</u>: Most likely the _spatial object_ or even the _spatiotemporal extent_ role would capture the qualities of an object, namely, that it occupies a position in space and time. [Spatial object](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/spatial-object), [Spatialtemporal extent](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/spatiotemporal-extent)
 
   - <u>**Source Dataset(s)**</u>: [Scanned Objects by Google](https://research.google/blog/scanned-objects-by-google-research-a-dataset-of-3d-scanned-common-household-items/), [BridgeData V2](https://rail-berkeley.github.io/)
 
 ---
+
+- **Role**
+
+  - <u><b>Rationale</b></u>: Used to represent the immediate characteristics and participation of a SpatialThing in a specific context (i.e, a Task providing a Role).
+  - <u>**Connected Pattern**</u>: [participant-role-pattern](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/participant-role/participant-role-pattern.pdf), [agent-role-pattern](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/agent-role/agent-role-pattern.pdf), [role-dependent-name](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/role-dependent-name/role-dependent-name-pattern.pdf)
+
+  - <u>**Source Dataset(s)**</u>: TBD
+
+---
+
+- **Feature**
+
+  - <u><b>Rationale</b></u>: A spatial thing that only exists as part of a host object (i.e., holes, color, bumps)
+
+  - <u>**Connected Pattern**</u>: [Spatial-Object-Pattern](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/spatial-object/spatial-object-pattern.pdf)
+
+  - <u>**Source Dataset(s)**</u>: [Scanned Objects by Google](https://research.google/blog/scanned-objects-by-google-research-a-dataset-of-3d-scanned-common-household-items/), [BridgeData V2](https://rail-berkeley.github.io/)
+
+  ***
+
+- **Geometry**
+
+  - <u><b>Rationale</b></u>: The geometry data of a spatial thing (i.e., mesh data, dimensions)
+
+  - <u>**Connected Pattern**</u>: [Spatial-Object-Pattern](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/spatial-object/spatial-object-pattern.pdf)
+
+  - <u>**Source Dataset(s)**</u>: [Scanned Objects by Google](https://research.google/blog/scanned-objects-by-google-research-a-dataset-of-3d-scanned-common-household-items/), [BridgeData V2](https://rail-berkeley.github.io/)
+
+---
+
+- **RelationInstance**
+
+  - <u><b>Rationale</b></u>: Through reification, typecasting properties into subproperties of a spatial thing (i.e., component, member, place, and feature types).
+
+  - <u>**Connected Pattern**</u>: [Winston's Part Whole](https://ceur-ws.org/Vol-2195/pattern_paper_1.pdf)
+
+  - <u>**Source Dataset(s)**</u>: All
+
+---
+
+- **SpatialThing**
+
+  - <u><b>Rationale</b></u>: A physical thing that exists in time and space.
+
+  - <u>**Connected Pattern**</u>: [spatial-object-pattern](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/spatial-object/spatial-object-pattern.pdf)
+
+  - <u>**Source Dataset(s)**</u>: All
