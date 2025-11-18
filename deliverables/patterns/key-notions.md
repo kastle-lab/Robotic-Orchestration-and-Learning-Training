@@ -126,7 +126,7 @@
 
 - **Role**
 
-  - <u><b>Rationale</b></u>: Used to represent the immediate characteristics and participation of a SpatialThing's in a specific context.
+  - <u><b>Rationale</b></u>: Used to represent the immediate characteristics and participation of a SpatialThing in a specific context (i.e, a Task providing a Role).
   - <u>**Connected Pattern**</u>: [participant-role-pattern](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/participant-role/participant-role-pattern.pdf), [agent-role-pattern](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/agent-role/agent-role-pattern.pdf), [role-dependent-name](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/role-dependent-name/role-dependent-name-pattern.pdf)
 
   - <u>**Source Dataset(s)**</u>: TBD
