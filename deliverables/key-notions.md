@@ -91,16 +91,11 @@
 
 - **Category**
 
-  - <u><b>Rationale</b></u>: Specifications to differentiate Spatial Things that are present within an environment.
+  - <u><b>Rationale</b></u>: Specifications to differentiate Spatial Things that are present within an environment. Category has various subclasses, but the key notion doesn't capture the categories themselves. Therefore, Category is related to CategorizationType, which is a controlled vocabulary. The controlled vocabulary will provide actual examples of Categories.
 
   - <u>**Connected Pattern**</u>:
 
     - One major pattern that may suffice is the _explicit typing_ ODP, because one is describing an object by its _type_ or _category_: [Explicit Typing](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/explicit-typing).
-
-    - Category will have **CategorizationType**, which is a controlled vocabulary that encompasses different different Categories of objects. This is distinguished from the Category notion, which schematizes the subclass relationships between classes/subclasses of Categories, but does not capture the Categories themselves.
-        
-    - As an example, we could have a CategorizationType vocabulary that contains:
-        - 
 
   - <u>**Source Dataset(s)**</u>: [Princeton Model Net](https://modelnet.cs.princeton.edu/#)
 
