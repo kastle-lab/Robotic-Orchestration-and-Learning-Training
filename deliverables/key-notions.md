@@ -97,6 +97,11 @@
 
     - One major pattern that may suffice is the _explicit typing_ ODP, because one is describing an object by its _type_ or _category_: [Explicit Typing](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/explicit-typing).
 
+    - Category will have **CategorizationType**, which is a controlled vocabulary that encompasses different different Categories of objects. This is distinguished from the Category notion, which schematizes the subclass relationships between classes/subclasses of Categories, but does not capture the Categories themselves.
+        
+    - As an example, we could have a CategorizationType vocabulary that contains:
+        - 
+
   - <u>**Source Dataset(s)**</u>: [Princeton Model Net](https://modelnet.cs.princeton.edu/#)
 
 ---
@@ -167,3 +172,8 @@
   - <u>**Connected Pattern**</u>: [spatial-object-pattern](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/spatial-object/spatial-object-pattern.pdf)
 
   - <u>**Source Dataset(s)**</u>: All
+
+---
+- **CategoryType**
+    - <u><b>Rationale</b></u>: A controlled vocabulary that encompasses different different categories of objects. This is distinguished from the Category notion, which schematizes the subclass relationships between various categories, but does not capture the categories themselves.
+
