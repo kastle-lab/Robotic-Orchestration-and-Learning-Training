@@ -90,7 +90,7 @@
 
 - **Category**
 
-  - <u><b>Rationale</b></u>: Specifications to differentiate Spatial Things that are present within an environment.
+  - <u><b>Rationale</b></u>: Specifications to differentiate Spatial Things. Category has various subclasses, each of which will have an explicit CategorizationType, which is provided by a controlled vocabulary. 
 
   - <u>**Connected Pattern**</u>:
 
@@ -166,3 +166,6 @@
   - <u>**Connected Pattern**</u>: [spatial-object-pattern](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/spatial-object/spatial-object-pattern.pdf)
 
   - <u>**Source Dataset(s)**</u>: All
+
+---
+
