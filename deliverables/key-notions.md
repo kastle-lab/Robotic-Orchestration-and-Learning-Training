@@ -91,7 +91,7 @@
 
 - **Category**
 
-  - <u><b>Rationale</b></u>: Specifications to differentiate Spatial Things that are present within an environment. Category has various subclasses, but the key notion doesn't capture the categories themselves. Therefore, Category is related to CategorizationType, which is a controlled vocabulary. The controlled vocabulary will provide actual examples of Categories.
+  - <u><b>Rationale</b></u>: Specifications to differentiate Spatial Things. Category has various subclasses, each of which will have an explicit CategorizationType, which is provided by a controlled vocabulary. 
 
   - <u>**Connected Pattern**</u>:
 
