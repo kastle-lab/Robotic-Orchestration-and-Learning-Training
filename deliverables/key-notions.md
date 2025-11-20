@@ -169,6 +169,4 @@
   - <u>**Source Dataset(s)**</u>: All
 
 ---
-- **CategoryType**
-    - <u><b>Rationale</b></u>: A controlled vocabulary that encompasses different different categories of objects. This is distinguished from the Category notion, which schematizes the subclass relationships between various categories, but does not capture the categories themselves.
 
