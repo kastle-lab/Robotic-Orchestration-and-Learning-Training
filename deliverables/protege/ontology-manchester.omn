@@ -1,0 +1,368 @@
+Prefix: : <urn:absolute:http//:www.cs7820-robo-orchestration.org/ontology/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: robo-ont: <http://:www.cs7820-robo-orchestration.org/ontology/>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <urn:absolute:http//:www.cs7820-robo-orchestration.org/ontology/>
+
+
+Datatype: xsd:string
+
+    
+ObjectProperty: owl:topObjectProperty
+
+    
+ObjectProperty: robo-ont:belongsToCategory
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: robo-ont:dependsOnTask
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: robo-ont:hasCategorizationType
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: robo-ont:hasDeadline
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: robo-ont:hasNextTask
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: robo-ont:hasOperationalExtent
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: robo-ont:hasSubGoal
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: robo-ont:hasSuccessState
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: robo-ont:hasTask
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: robo-ont:isWithinBounds
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: robo-ont:providesRole
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: robo-ont:requiresArchetype
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: robo-ont:requiresSpatialThing
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: robo-ont:subClassOf
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+DataProperty: robo-ont:hasInstructionalText
+
+    
+Class: Motion-Based
+
+    SubClassOf: 
+        robo-ont:Capability
+    
+    
+Class: Sensor-Based
+
+    SubClassOf: 
+        robo-ont:Capability
+    
+    
+Class: Touch
+
+    SubClassOf: 
+        Motion-Based
+    
+    
+Class: Vision
+
+    SubClassOf: 
+        Motion-Based
+    
+    
+Class: owl:Thing
+
+    SubClassOf: 
+        robo-ont:hasOperationalExtent only robo-ont:SpatialExtent,
+        robo-ont:hasSuccessState only robo-ont:State,
+        robo-ont:isWithinBounds only robo-ont:SpatialExtent
+    
+    
+Class: robo-ont:AgentCategory
+
+    SubClassOf: 
+        robo-ont:Category
+    
+    
+Class: robo-ont:Archetype
+
+    
+Class: robo-ont:Audition
+
+    SubClassOf: 
+        Motion-Based
+    
+    
+Class: robo-ont:Capability
+
+    
+Class: robo-ont:CategorizationType
+
+    
+Class: robo-ont:Category
+
+    SubClassOf: 
+        (robo-ont:hasCategorizationType some robo-ont:CategorizationType)
+         and (robo-ont:hasCategorizationType only robo-ont:CategorizationType),
+        robo-ont:isWithinBounds only robo-ont:SpatialExtent
+    
+    
+Class: robo-ont:Close
+
+    SubClassOf: 
+        robo-ont:Gripper-Based
+    
+    
+Class: robo-ont:Constructor
+
+    SubClassOf: 
+        robo-ont:Archetype
+    
+    
+Class: robo-ont:Digger
+
+    SubClassOf: 
+        robo-ont:Archetype
+    
+    
+Class: robo-ont:Distance
+
+    SubClassOf: 
+        Motion-Based
+    
+    
+Class: robo-ont:EnvironmentCategory
+
+    SubClassOf: 
+        robo-ont:Category
+    
+    
+Class: robo-ont:Explorer
+
+    SubClassOf: 
+        robo-ont:Archetype
+    
+    
+Class: robo-ont:Goal
+
+    SubClassOf: 
+        (robo-ont:hasDeadline some robo-ont:TemporalExtent)
+         and (robo-ont:hasDeadline max 1 robo-ont:TemporalExtent),
+        (robo-ont:hasTask only robo-ont:Task)
+         and (robo-ont:hasTask max 1 robo-ont:Task),
+        robo-ont:hasOperationalExtent some robo-ont:SpatialExtent,
+        robo-ont:hasSubGoal only robo-ont:Goal,
+        robo-ont:isWithinBounds min 0 robo-ont:SpatialExtent,
+        robo-ont:hasInstructionalText max 1 xsd:string
+    
+    
+Class: robo-ont:Gripper-Based
+
+    SubClassOf: 
+        robo-ont:Capability
+    
+    
+Class: robo-ont:Harvestor
+
+    SubClassOf: 
+        robo-ont:Archetype
+    
+    
+Class: robo-ont:Hauler
+
+    SubClassOf: 
+        robo-ont:Archetype
+    
+    
+Class: robo-ont:Inspector
+
+    SubClassOf: 
+        robo-ont:Archetype
+    
+    
+Class: robo-ont:Move
+
+    SubClassOf: 
+        Sensor-Based
+    
+    
+Class: robo-ont:ObjectCategory
+
+    SubClassOf: 
+        robo-ont:Category
+    
+    
+Class: robo-ont:Open
+
+    SubClassOf: 
+        robo-ont:Gripper-Based
+    
+    
+Class: robo-ont:Painter
+
+    SubClassOf: 
+        robo-ont:Archetype
+    
+    
+Class: robo-ont:Pick
+
+    SubClassOf: 
+        robo-ont:Gripper-Based
+    
+    
+Class: robo-ont:Place
+
+    SubClassOf: 
+        robo-ont:Gripper-Based
+    
+    
+Class: robo-ont:Press
+
+    SubClassOf: 
+        Sensor-Based
+    
+    
+Class: robo-ont:Pull
+
+    SubClassOf: 
+        Sensor-Based
+    
+    
+Class: robo-ont:Push
+
+    SubClassOf: 
+        Sensor-Based
+    
+    
+Class: robo-ont:Role
+
+    
+Class: robo-ont:RoleCategory
+
+    SubClassOf: 
+        robo-ont:Category
+    
+    
+Class: robo-ont:Rotate
+
+    SubClassOf: 
+        Sensor-Based
+    
+    
+Class: robo-ont:Sentinel
+
+    SubClassOf: 
+        robo-ont:Archetype
+    
+    
+Class: robo-ont:SpatialExtent
+
+    
+Class: robo-ont:SpatialThing
+
+    
+Class: robo-ont:State
+
+    
+Class: robo-ont:Task
+
+    SubClassOf: 
+        (robo-ont:requiresArchetype some robo-ont:Archetype)
+         and (robo-ont:requiresArchetype only robo-ont:Archetype)
+         and (robo-ont:requiresArchetype max 1 robo-ont:Archetype),
+        ( inverse (robo-ont:providesRole) some robo-ont:Task)
+         and (robo-ont:providesRole only robo-ont:Role),
+        (robo-ont:dependsOnTask only robo-ont:Task)
+         and (robo-ont:dependsOnTask min 0 robo-ont:Task),
+        (robo-ont:hasNextTask only robo-ont:Task)
+         and (robo-ont:hasNextTask min 0 robo-ont:Task),
+        robo-ont:requiresSpatialThing some robo-ont:SpatialThing
+    
+    
+Class: robo-ont:TemporalExtent
+
+    
+Class: robo-ont:hasNextTask some robo-ont:Task
+
+    SubClassOf: 
+        robo-ont:Task
+    
+    Class: robo-ont:hasSubGoal some robo-ont:Goal
+    
+        SubClassOf: 
+            robo-ont:Goal
+        
+        Class: robo-ont:dependsOnTask some robo-ont:Task
+        
+            SubClassOf: 
+                robo-ont:Task
+            
+            Class: robo-ont:hasTask some robo-ont:Task
+            
+                SubClassOf: 
+                    robo-ont:Goal
+                
+                Class: robo-ont:hasCategorizationType some robo-ont:CategorizationType
+                
+                    SubClassOf: 
+                        robo-ont:Category
+                    
+                    

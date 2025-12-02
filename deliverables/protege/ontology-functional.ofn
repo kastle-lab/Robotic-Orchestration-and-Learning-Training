@@ -1,0 +1,279 @@
+Prefix(:=<urn:absolute:http//:www.cs7820-robo-orchestration.org/ontology/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(robo-ont:=<http://:www.cs7820-robo-orchestration.org/ontology/>)
+
+
+Ontology(<urn:absolute:http//:www.cs7820-robo-orchestration.org/ontology/>
+
+Declaration(Class(robo-ont:AgentCategory))
+Declaration(Class(robo-ont:Archetype))
+Declaration(Class(robo-ont:Audition))
+Declaration(Class(robo-ont:Capability))
+Declaration(Class(robo-ont:CategorizationType))
+Declaration(Class(robo-ont:Category))
+Declaration(Class(robo-ont:Close))
+Declaration(Class(robo-ont:Constructor))
+Declaration(Class(robo-ont:Digger))
+Declaration(Class(robo-ont:Distance))
+Declaration(Class(robo-ont:EnvironmentCategory))
+Declaration(Class(robo-ont:Explorer))
+Declaration(Class(robo-ont:Goal))
+Declaration(Class(robo-ont:Gripper-Based))
+Declaration(Class(robo-ont:Harvestor))
+Declaration(Class(robo-ont:Hauler))
+Declaration(Class(robo-ont:Inspector))
+Declaration(Class(robo-ont:Move))
+Declaration(Class(robo-ont:ObjectCategory))
+Declaration(Class(robo-ont:Open))
+Declaration(Class(robo-ont:Painter))
+Declaration(Class(robo-ont:Pick))
+Declaration(Class(robo-ont:Place))
+Declaration(Class(robo-ont:Press))
+Declaration(Class(robo-ont:Pull))
+Declaration(Class(robo-ont:Push))
+Declaration(Class(robo-ont:Role))
+Declaration(Class(robo-ont:RoleCategory))
+Declaration(Class(robo-ont:Rotate))
+Declaration(Class(robo-ont:Sentinel))
+Declaration(Class(robo-ont:SpatialExtent))
+Declaration(Class(robo-ont:SpatialThing))
+Declaration(Class(robo-ont:State))
+Declaration(Class(robo-ont:Task))
+Declaration(Class(robo-ont:TemporalExtent))
+Declaration(Class(:Motion-Based))
+Declaration(Class(:Sensor-Based))
+Declaration(Class(:Touch))
+Declaration(Class(:Vision))
+Declaration(ObjectProperty(robo-ont:belongsToCategory))
+Declaration(ObjectProperty(robo-ont:dependsOnTask))
+Declaration(ObjectProperty(robo-ont:hasCategorizationType))
+Declaration(ObjectProperty(robo-ont:hasDeadline))
+Declaration(ObjectProperty(robo-ont:hasNextTask))
+Declaration(ObjectProperty(robo-ont:hasOperationalExtent))
+Declaration(ObjectProperty(robo-ont:hasSubGoal))
+Declaration(ObjectProperty(robo-ont:hasSuccessState))
+Declaration(ObjectProperty(robo-ont:hasTask))
+Declaration(ObjectProperty(robo-ont:isWithinBounds))
+Declaration(ObjectProperty(robo-ont:providesRole))
+Declaration(ObjectProperty(robo-ont:requiresArchetype))
+Declaration(ObjectProperty(robo-ont:requiresSpatialThing))
+Declaration(ObjectProperty(robo-ont:subClassOf))
+Declaration(DataProperty(robo-ont:hasInstructionalText))
+############################
+#   Object Properties
+############################
+
+# Object Property: robo-ont:belongsToCategory (robo-ont:belongsToCategory)
+
+SubObjectPropertyOf(robo-ont:belongsToCategory owl:topObjectProperty)
+
+# Object Property: robo-ont:dependsOnTask (robo-ont:dependsOnTask)
+
+SubObjectPropertyOf(robo-ont:dependsOnTask owl:topObjectProperty)
+
+# Object Property: robo-ont:hasCategorizationType (robo-ont:hasCategorizationType)
+
+SubObjectPropertyOf(robo-ont:hasCategorizationType owl:topObjectProperty)
+
+# Object Property: robo-ont:hasDeadline (robo-ont:hasDeadline)
+
+SubObjectPropertyOf(robo-ont:hasDeadline owl:topObjectProperty)
+
+# Object Property: robo-ont:hasNextTask (robo-ont:hasNextTask)
+
+SubObjectPropertyOf(robo-ont:hasNextTask owl:topObjectProperty)
+
+# Object Property: robo-ont:hasOperationalExtent (robo-ont:hasOperationalExtent)
+
+SubObjectPropertyOf(robo-ont:hasOperationalExtent owl:topObjectProperty)
+
+# Object Property: robo-ont:hasSubGoal (robo-ont:hasSubGoal)
+
+SubObjectPropertyOf(robo-ont:hasSubGoal owl:topObjectProperty)
+
+# Object Property: robo-ont:hasSuccessState (robo-ont:hasSuccessState)
+
+SubObjectPropertyOf(robo-ont:hasSuccessState owl:topObjectProperty)
+
+# Object Property: robo-ont:hasTask (robo-ont:hasTask)
+
+SubObjectPropertyOf(robo-ont:hasTask owl:topObjectProperty)
+
+# Object Property: robo-ont:isWithinBounds (robo-ont:isWithinBounds)
+
+SubObjectPropertyOf(robo-ont:isWithinBounds owl:topObjectProperty)
+
+# Object Property: robo-ont:providesRole (robo-ont:providesRole)
+
+SubObjectPropertyOf(robo-ont:providesRole owl:topObjectProperty)
+
+# Object Property: robo-ont:requiresArchetype (robo-ont:requiresArchetype)
+
+SubObjectPropertyOf(robo-ont:requiresArchetype owl:topObjectProperty)
+
+# Object Property: robo-ont:requiresSpatialThing (robo-ont:requiresSpatialThing)
+
+SubObjectPropertyOf(robo-ont:requiresSpatialThing owl:topObjectProperty)
+
+# Object Property: robo-ont:subClassOf (robo-ont:subClassOf)
+
+SubObjectPropertyOf(robo-ont:subClassOf owl:topObjectProperty)
+
+
+
+
+############################
+#   Classes
+############################
+
+# Class: robo-ont:AgentCategory (robo-ont:AgentCategory)
+
+SubClassOf(robo-ont:AgentCategory robo-ont:Category)
+
+# Class: robo-ont:Audition (robo-ont:Audition)
+
+SubClassOf(robo-ont:Audition :Motion-Based)
+
+# Class: robo-ont:Category (robo-ont:Category)
+
+SubClassOf(robo-ont:Category ObjectIntersectionOf(ObjectSomeValuesFrom(robo-ont:hasCategorizationType robo-ont:CategorizationType) ObjectAllValuesFrom(robo-ont:hasCategorizationType robo-ont:CategorizationType)))
+SubClassOf(robo-ont:Category ObjectAllValuesFrom(robo-ont:isWithinBounds robo-ont:SpatialExtent))
+
+# Class: robo-ont:Close (robo-ont:Close)
+
+SubClassOf(robo-ont:Close robo-ont:Gripper-Based)
+
+# Class: robo-ont:Constructor (robo-ont:Constructor)
+
+SubClassOf(robo-ont:Constructor robo-ont:Archetype)
+
+# Class: robo-ont:Digger (robo-ont:Digger)
+
+SubClassOf(robo-ont:Digger robo-ont:Archetype)
+
+# Class: robo-ont:Distance (robo-ont:Distance)
+
+SubClassOf(robo-ont:Distance :Motion-Based)
+
+# Class: robo-ont:EnvironmentCategory (robo-ont:EnvironmentCategory)
+
+SubClassOf(robo-ont:EnvironmentCategory robo-ont:Category)
+
+# Class: robo-ont:Explorer (robo-ont:Explorer)
+
+SubClassOf(robo-ont:Explorer robo-ont:Archetype)
+
+# Class: robo-ont:Goal (robo-ont:Goal)
+
+SubClassOf(robo-ont:Goal ObjectIntersectionOf(ObjectSomeValuesFrom(robo-ont:hasDeadline robo-ont:TemporalExtent) ObjectMaxCardinality(1 robo-ont:hasDeadline robo-ont:TemporalExtent)))
+SubClassOf(robo-ont:Goal ObjectIntersectionOf(ObjectAllValuesFrom(robo-ont:hasTask robo-ont:Task) ObjectMaxCardinality(1 robo-ont:hasTask robo-ont:Task)))
+SubClassOf(robo-ont:Goal ObjectSomeValuesFrom(robo-ont:hasOperationalExtent robo-ont:SpatialExtent))
+SubClassOf(robo-ont:Goal ObjectAllValuesFrom(robo-ont:hasSubGoal robo-ont:Goal))
+SubClassOf(robo-ont:Goal ObjectMinCardinality(0 robo-ont:isWithinBounds robo-ont:SpatialExtent))
+SubClassOf(robo-ont:Goal DataMaxCardinality(1 robo-ont:hasInstructionalText xsd:string))
+
+# Class: robo-ont:Gripper-Based (robo-ont:Gripper-Based)
+
+SubClassOf(robo-ont:Gripper-Based robo-ont:Capability)
+
+# Class: robo-ont:Harvestor (robo-ont:Harvestor)
+
+SubClassOf(robo-ont:Harvestor robo-ont:Archetype)
+
+# Class: robo-ont:Hauler (robo-ont:Hauler)
+
+SubClassOf(robo-ont:Hauler robo-ont:Archetype)
+
+# Class: robo-ont:Inspector (robo-ont:Inspector)
+
+SubClassOf(robo-ont:Inspector robo-ont:Archetype)
+
+# Class: robo-ont:Move (robo-ont:Move)
+
+SubClassOf(robo-ont:Move :Sensor-Based)
+
+# Class: robo-ont:ObjectCategory (robo-ont:ObjectCategory)
+
+SubClassOf(robo-ont:ObjectCategory robo-ont:Category)
+
+# Class: robo-ont:Open (robo-ont:Open)
+
+SubClassOf(robo-ont:Open robo-ont:Gripper-Based)
+
+# Class: robo-ont:Painter (robo-ont:Painter)
+
+SubClassOf(robo-ont:Painter robo-ont:Archetype)
+
+# Class: robo-ont:Pick (robo-ont:Pick)
+
+SubClassOf(robo-ont:Pick robo-ont:Gripper-Based)
+
+# Class: robo-ont:Place (robo-ont:Place)
+
+SubClassOf(robo-ont:Place robo-ont:Gripper-Based)
+
+# Class: robo-ont:Press (robo-ont:Press)
+
+SubClassOf(robo-ont:Press :Sensor-Based)
+
+# Class: robo-ont:Pull (robo-ont:Pull)
+
+SubClassOf(robo-ont:Pull :Sensor-Based)
+
+# Class: robo-ont:Push (robo-ont:Push)
+
+SubClassOf(robo-ont:Push :Sensor-Based)
+
+# Class: robo-ont:RoleCategory (robo-ont:RoleCategory)
+
+SubClassOf(robo-ont:RoleCategory robo-ont:Category)
+
+# Class: robo-ont:Rotate (robo-ont:Rotate)
+
+SubClassOf(robo-ont:Rotate :Sensor-Based)
+
+# Class: robo-ont:Sentinel (robo-ont:Sentinel)
+
+SubClassOf(robo-ont:Sentinel robo-ont:Archetype)
+
+# Class: robo-ont:Task (robo-ont:Task)
+
+SubClassOf(robo-ont:Task ObjectIntersectionOf(ObjectSomeValuesFrom(robo-ont:requiresArchetype robo-ont:Archetype) ObjectAllValuesFrom(robo-ont:requiresArchetype robo-ont:Archetype) ObjectMaxCardinality(1 robo-ont:requiresArchetype robo-ont:Archetype)))
+SubClassOf(robo-ont:Task ObjectIntersectionOf(ObjectSomeValuesFrom(ObjectInverseOf(robo-ont:providesRole) robo-ont:Task) ObjectAllValuesFrom(robo-ont:providesRole robo-ont:Role)))
+SubClassOf(robo-ont:Task ObjectIntersectionOf(ObjectAllValuesFrom(robo-ont:dependsOnTask robo-ont:Task) ObjectMinCardinality(0 robo-ont:dependsOnTask robo-ont:Task)))
+SubClassOf(robo-ont:Task ObjectIntersectionOf(ObjectAllValuesFrom(robo-ont:hasNextTask robo-ont:Task) ObjectMinCardinality(0 robo-ont:hasNextTask robo-ont:Task)))
+SubClassOf(robo-ont:Task ObjectSomeValuesFrom(robo-ont:requiresSpatialThing robo-ont:SpatialThing))
+
+# Class: owl:Thing (owl:Thing)
+
+SubClassOf(owl:Thing ObjectAllValuesFrom(robo-ont:hasOperationalExtent robo-ont:SpatialExtent))
+SubClassOf(owl:Thing ObjectAllValuesFrom(robo-ont:hasSuccessState robo-ont:State))
+SubClassOf(owl:Thing ObjectAllValuesFrom(robo-ont:isWithinBounds robo-ont:SpatialExtent))
+
+# Class: :Motion-Based (:Motion-Based)
+
+SubClassOf(:Motion-Based robo-ont:Capability)
+
+# Class: :Sensor-Based (:Sensor-Based)
+
+SubClassOf(:Sensor-Based robo-ont:Capability)
+
+# Class: :Touch (:Touch)
+
+SubClassOf(:Touch :Motion-Based)
+
+# Class: :Vision (:Vision)
+
+SubClassOf(:Vision :Motion-Based)
+
+
+SubClassOf(ObjectSomeValuesFrom(robo-ont:dependsOnTask robo-ont:Task) robo-ont:Task)
+SubClassOf(ObjectSomeValuesFrom(robo-ont:hasCategorizationType robo-ont:CategorizationType) robo-ont:Category)
+SubClassOf(ObjectSomeValuesFrom(robo-ont:hasNextTask robo-ont:Task) robo-ont:Task)
+SubClassOf(ObjectSomeValuesFrom(robo-ont:hasSubGoal robo-ont:Goal) robo-ont:Goal)
+SubClassOf(ObjectSomeValuesFrom(robo-ont:hasTask robo-ont:Task) robo-ont:Goal)
+)
