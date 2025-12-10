@@ -7,6 +7,8 @@
 - Category
 - Environment-Object-Constitution
 - Goal-Task
+- SpatialThing
+- Role
 
 ## Deliverables
 
