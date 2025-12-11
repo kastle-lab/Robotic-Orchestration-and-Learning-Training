@@ -165,7 +165,8 @@ robo-ont:Action rdf:type owl:Class .
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/AgentCategory
 robo-ont:AgentCategory rdf:type owl:Class ;
-                       rdfs:subClassOf robo-ont:Category .
+                       rdfs:subClassOf robo-ont:Category ;
+                       owl:disjointWith robo-ont:Category .
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/Archetype
@@ -206,7 +207,10 @@ robo-ont:Category rdf:type owl:Class ;
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty robo-ont:hasCategorizationType ;
                                     owl:allValuesFrom robo-ont:CategorizationType
-                                  ] .
+                                  ] ;
+                  owl:disjointWith robo-ont:EnvironmentCategory ,
+                                   robo-ont:ObjectCategory ,
+                                   robo-ont:RoleCategory .
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/Close
@@ -471,6 +475,15 @@ robo-ont:Vision rdf:type owl:Class ;
   owl:onProperty robo-ont:hasTask ;
   owl:someValuesFrom robo-ont:Task ;
   rdfs:subClassOf robo-ont:Goal
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( robo-ont:AgentCategory
+                robo-ont:EnvironmentCategory
+                robo-ont:ObjectCategory
+                robo-ont:RoleCategory
+              )
 ] .
 
 
