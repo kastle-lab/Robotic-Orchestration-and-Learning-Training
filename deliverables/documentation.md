@@ -125,31 +125,69 @@ Specifications to differentiate and define what actions an agent can perform.
 
 - Additional subclasses to be added in the future.
 
-<!-- There should be one module section per module (essentially per key-notion) -->
-
 ### Goal-Task
 
-**Source Pattern:** name of adapted source pattern
-**Source Data:** name(s) of dataset(s) which populate this module
+**Source Pattern:** Trajectory, SpatiotemporalExtent, Description-Situation <br>
+**Source Data:** DROID, RH20T-P
 
 #### Description
 
-Description Text (adapted from the rationale in `key-notions.md`).
+Specifications to represent desired outcomes and anchors to atomic unit of work with hierarchies, decomposition and sequence semantics
 
 ![schema-diagram](./patterns/goal-task-pattern/goal-task-pattern.png)
 
 #### Axioms
 
-- `axiom in manchester syntax` <br />
-  natural language description
-- `axiom in manchester syntax` <br />
-  natural language description
-
-#### Remarks
-
-- Any remarks re: usage
-
-<!-- There should be one module section per module (essentially per key-notion) -->
+- `Goal SubClassOf hasDeadline some TemporalExtent` <br />
+  If a Goal exists, it must have at least one hasDeadline, and is of type TemporalExtent
+- `Goal SubClassOf hasDeadline max 1 TemporalExtent` <br />
+  For every Goal, there exists no or exactly 1 hasDeadline, and is of type TemporalExtent
+- `Thing SubClassOf isWithinBounds only SpatialExtent` <br />
+  For any thing, if there exists isWithinBounds, the global range is SpatialExtent.
+- `Goal SubClassOf isWithinBounds only SpatialExtent` <br />
+  For every Goal there may exist isWithinBounds, and is of type SpatialExtent.
+- `Thing SubClassOf hasOperationalExtent only SpatialExtent` <br />
+  For any thing, if there exists hasOperationalExtent, the global range is SpatialExtent.
+- `Goal SubClassOf hasInstructionalText max 1 xsd:String` <br />
+  For every Goal, there exists no or exactly 1 hasInstructionalText, and is of type xsd:String
+- `hasSubGoal some Goal SubClassOf Goal` <br />
+  The scoped domain of hasSubGoal, scoped by Goal, is of Goal.
+- `Goal SubClassOf hasSubGoal only Goal` <br />
+  The scoped range of hasSubGoal, scoped by Goal, is of Goal
+- `Thing SubClassOf hasSuccessState only State` <br />
+  For any thing, if there exists hasSuccessState, the global range is State.
+- `hasTask some Task SubClassOf Goal` <br />
+  The scoped domain of hasSubGoal, scoped by Task, is of Goal.
+- `Goal SubClassOf hasTask only Task` <br />
+  The scoped range of hasSubGoal, scoped by Goal, is of Task
+- `Goal SubClassOf hasTask max 1 Task` <br />
+  For every Goal, there exists no or exactly 1 hasTask, and is of type Task
+- `dependsOnTask some Task SubClassOf Task` <br />
+  The scoped domain of dependsOnTask, scoped by Task, is of Task.
+- `Task SubClassOf dependsOnTask only Task` <br />
+  The scoped range of dependsOnTask, scoped by Task, is of Task
+- `Task SubClassOf dependsOnTask only Task` <br />
+  For every Task there may exist dependsOnTask, and is of type Task.
+- `hasNextTask some Task SubClassOf Task
+` <br />
+  The scoped domain of hasNextTask, scoped by Task, is of Task.
+- `Task SubClassOf hasNextTask only Task` <br />
+  The scoped range of hasNextTask, scoped by Task, is of Task
+- `Task SubClassOf hasNextTask only Task` <br />
+  For every Task there may exist hasNextTask, and is of type Task.
+- `Task SubClassOf providesRole only Role` <br />
+  The scoped range of providesRole, scoped by Task, is of Role
+- `Role SubClassOf inverse providesRole some Task` <br />
+  For every Task, there has to be an inverse providesRole-filler and is of type Role
+- `Task SubClassOf requiresSpatialThing some SpatialThing` <br />
+  If a Task exists, it must have at least one requiresSpatialThing, and is of type SpatialThing
+- `Task SubClassOf requiresArchetype only Archetype
+` <br />
+  The scoped range of requiresArchetype, scoped by Task, is of Archetype
+- `Task SubClassOf requiresArchetype some Archetype` <br />
+  If a Task exists, it must have at least one requiresArchetype, and is of type Archetype
+- `Task SubClassOf requiresArchetype max 1 Archetype` <br />
+  For every Task, there exists no or exactly 1 requiresArchetype, and is of type Archetype
 
 ### Archetype
 
@@ -194,55 +232,85 @@ Representing the thematic capabilities of a robotic agent (E.g., Explorer, Haule
 
 - Additional subclasses to be added in the future.
 
-<!-- There should be one module section per module (essentially per key-notion) -->
-
 ### SpatialThing
 
-**Source Pattern:** name of adapted source pattern
-**Source Data:** name(s) of dataset(s) which populate this module
+**Source Pattern:** Winston's Part Whole, Spatial-Object, Identifier <br>
+**Source Data:** All
 
 #### Description
 
-Description Text (adapted from the rationale in `key-notions.md`).
+Specification to represent physical things that exists in time and space.
 
 ![schema-diagram](./patterns/spatial-thing/spatial-thing-pattern.png)
 
 #### Axioms
 
-- `axiom in manchester syntax` <br />
-  natural language description
-- `axiom in manchester syntax` <br />
-  natural language description
-
-#### Remarks
-
-- Any remarks re: usage
-
-<!-- There should be one module section per module (essentially per key-notion) -->
+- `Thing SubClassOf hasIdentifier only Identifier` <br />
+  For any thing, if there exists hasIdentifier, the global range is Identifier.
+- `Thing SubClassOf hasIdentifier max 1 Identifier` <br />
+  For any thing, there exists no or exactly 1, and is of type Identifier
+- `Thing SubClassOf hasSpatioTemporalExtent only SpatioTemporalExtent` <br />
+  For any thing, if there exists hasSpatioTemporalExtent, the global range is SpatioTemporalExtent.
+- `SpatialThing SubClassOf hasSpatioTemporalExtent some SpatioTemporalExtent` <br />
+  If a SpatialThing exists, it must have at least one hasSpatioTemporalExtent, and is of type SpatioTemporalExtent
+- `Thing SubClassOf hasState only State` <br />
+  For any thing, if there exists hasState, the global range is State.
+- `Thing SubClassOf belongsToCategory only Category` <br />
+  For any thing, if there exists belongsToCategory, the global range is Category.
 
 ### Category
 
-**Source Pattern:** name of adapted source pattern
-**Source Data:** name(s) of dataset(s) which populate this module
+**Source Pattern:** Explicit Typing <br>
+**Source Data:** BridgeData V2, Princeton ModelNet
 
 #### Description
 
-Description Text (adapted from the rationale in `key-notions.md`).
+A specification to differentiate SpatialThing. Each Category subclass has an explicit CategorizationType. This type is provided by a controlled vocabulary.
 
 ![schema-diagram](./patterns/categorization-pattern/categorization-pattern.png)
 
 #### Axioms
 
-- `axiom in manchester syntax` <br />
-  natural language description
-- `axiom in manchester syntax` <br />
-  natural language description
-
-#### Remarks
-
-- Any remarks re: usage
-
-<!-- There should be one module section per module (essentially per key-notion) -->
+- `RoleCategory SubClassOf Category` <br />
+  Every RoleCategory is a Category.
+- `RoleCategory DisjointWith AgentCategory` <br />
+  No RoleCategory can belong to the AgentCategory class
+- `RoleCategory DisjointWith EnvironmentCategory` <br />
+  No RoleCategory can belong to the EnvironmentCategory class
+- `RoleCategory DisjointWith ObjectCategory` <br />
+  No RoleCategory can belong to the ObjectCategory class
+- `AgentCategory SubClassOf Category` <br />
+  Every AgentCategory is a Category.
+- `AgentCategory DisjointWith EnvironmentCategory` <br />
+  No AgentCategory can belong to the EnvironmentCategory class.
+- `AgentCategory DisjointWith ObjectCategory` <br />
+  No AgentCategory can belong to the ObjectCategory class.
+- `AgentCategory DisjointWith RoleCategory` <br />
+  No AgentCategory can belong to the RoleCategory class.
+- `EnvironmentCategory SubClassOf Category` <br />
+  Every EnvironmentCategory is a Category.
+- `EnvironmentCategory DisjointWith AgentCategory` <br />
+  No EnvironmentCategory can belong to the AgentCategory class.
+- `EnvironmentCategory DisjointWith ObjectCategory` <br />
+  No EnvironmentCategory can belong to the ObjectCategory class.
+- `EnvironmentCategory DisjointWith RoleCategory` <br />
+  No EnvironmentCategory can belong to the RoleCategory class.
+- `ObjectCategory SubClassOf Category` <br />
+  Every ObjectCategory is a Category.
+- `ObjectCategory DisjointWith AgentCategory` <br />
+  No ObjectCategory can belong to the AgentCategory class.
+- `ObjectCategory DisjointWith EnvironmentCategory` <br />
+  No ObjectCategory can belong to the EnvironentCategory class.
+- `ObjectCategory DisjointWith RoleCategory` <br />
+  No ObjectCategory can belong to the RoleCategory class.
+- `SpatialThing SubClassOf belongsToCategory some Category` <br />
+  Every SpatialThing belongs to at least one Category.
+- `hasCategorizationType CategorizationType SubClassOf Category` <br />
+  Because the tail entity of a “hasCategorizationType” triple is CategorizationType, the head entity must be a Category.
+- `Category SubClassOf hasCategorizationType only CategorizationType` <br />
+  Because the head entity of a “hasCategorizationType” triple is Category, the tail entity must be a CategorizationType.
+- `Category SubClassOf hasCategorizationType only CategorizationType` <br />
+  For each Category instance, there exists a CategorizationType instance that is related to the Category instance by the “hasCategorizationType” relationship.
 
 ### Role
 
@@ -298,8 +366,7 @@ Description Text (adapted from the rationale in `key-notions.md`).
 
 ### Namespaces
 
-- prefix: namespace
-- prefix: namespace
+- xmlns:robo-ont= https://www.cs7820-robo-orchestration.org/ontology/
 
 ### Schema Diagram
 
