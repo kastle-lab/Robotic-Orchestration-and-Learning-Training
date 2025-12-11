@@ -182,11 +182,15 @@ robo-ont:Archetype rdf:type owl:Class ;
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/Audition
 robo-ont:Audition rdf:type owl:Class ;
-                  rdfs:subClassOf robo-ont:Motion-Based .
+                  rdfs:subClassOf robo-ont:Sensor-Based ;
+                  owl:disjointWith robo-ont:Sensor-Based .
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/Capability
-robo-ont:Capability rdf:type owl:Class .
+robo-ont:Capability rdf:type owl:Class ;
+                    owl:disjointWith robo-ont:Gripper-Based ,
+                                     robo-ont:Motion-Based ,
+                                     robo-ont:Sensor-Based .
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/CategorizationType
@@ -222,7 +226,8 @@ robo-ont:Digger rdf:type owl:Class ;
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/Distance
 robo-ont:Distance rdf:type owl:Class ;
-                  rdfs:subClassOf robo-ont:Motion-Based .
+                  rdfs:subClassOf robo-ont:Sensor-Based ;
+                  owl:disjointWith robo-ont:Sensor-Based .
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/EnvironmentCategory
@@ -262,7 +267,10 @@ robo-ont:Goal rdf:type owl:Class ;
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/Gripper-Based
-robo-ont:Gripper-Based rdf:type owl:Class .
+robo-ont:Gripper-Based rdf:type owl:Class ;
+                       rdfs:subClassOf robo-ont:Capability ;
+                       owl:disjointWith robo-ont:Open ,
+                                        robo-ont:Place .
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/Harvestor
@@ -286,12 +294,15 @@ robo-ont:Inspector rdf:type owl:Class ;
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/Motion-Based
 robo-ont:Motion-Based rdf:type owl:Class ;
-                      rdfs:subClassOf robo-ont:Capability .
+                      rdfs:subClassOf robo-ont:Capability ;
+                      owl:disjointWith robo-ont:Move ,
+                                       robo-ont:Press ,
+                                       robo-ont:Rotate .
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/Move
 robo-ont:Move rdf:type owl:Class ;
-              rdfs:subClassOf robo-ont:Sensor-Based .
+              rdfs:subClassOf robo-ont:Motion-Based .
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/ObjectCategory
@@ -321,7 +332,7 @@ robo-ont:Place rdf:type owl:Class ;
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/Press
 robo-ont:Press rdf:type owl:Class ;
-               rdfs:subClassOf robo-ont:Sensor-Based .
+               rdfs:subClassOf robo-ont:Motion-Based .
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/Pull
@@ -363,12 +374,14 @@ robo-ont:RoleCategory rdf:type owl:Class ;
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/Rotate
 robo-ont:Rotate rdf:type owl:Class ;
-                rdfs:subClassOf robo-ont:Sensor-Based .
+                rdfs:subClassOf robo-ont:Motion-Based .
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/Sensor-Based
 robo-ont:Sensor-Based rdf:type owl:Class ;
-                      rdfs:subClassOf robo-ont:Capability .
+                      rdfs:subClassOf robo-ont:Capability ;
+                      owl:disjointWith robo-ont:Touch ,
+                                       robo-ont:Vision .
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/Sentinel
@@ -414,12 +427,12 @@ robo-ont:TemporalExtent rdf:type owl:Class .
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/Touch
 robo-ont:Touch rdf:type owl:Class ;
-               rdfs:subClassOf robo-ont:Motion-Based .
+               rdfs:subClassOf robo-ont:Sensor-Based .
 
 
 ###  https://www.cs7820-robo-orchestration.org/ontology/Vision
 robo-ont:Vision rdf:type owl:Class ;
-                rdfs:subClassOf robo-ont:Motion-Based .
+                rdfs:subClassOf robo-ont:Sensor-Based .
 
 
 #################################################################
