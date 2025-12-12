@@ -230,7 +230,7 @@ Representing the thematic capabilities of a robotic agent (E.g., Explorer, Haule
 
 #### Remarks
 
-- Additional subclasses to be added in the future.
+- Additional subclasses to be added in the future. Also, disjoint axioms will likely be removed.
 
 ### SpatialThing
 
@@ -366,7 +366,7 @@ Description Text (adapted from the rationale in `key-notions.md`).
 
 ### Namespaces
 
-- xmlns:robo-ont= https://www.cs7820-robo-orchestration.org/ontology/
+- robo-ont: https://www.cs7820-robo-orchestration.org/ontology/
 
 ### Schema Diagram
 
