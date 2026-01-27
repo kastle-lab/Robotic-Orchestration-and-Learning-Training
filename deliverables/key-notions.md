@@ -66,7 +66,6 @@
 ---
 
 - **Task**
-
   - <u>**Rationale**</u>: Represents any atomic unit of work to be performed by our agents.
   - <u>**Connected Pattern**</u>: [trajectory](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/trajectory/trajectory-pattern.pdf), [sequence](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/sequence/sequence-pattern.pdf)
   - <u>**Source Dataset(s)**</u>: [ALFRED](https://askforalfred.com/), [RH20T-P](https://sites.google.com/view/rh20t-primitive/main)
@@ -74,7 +73,6 @@
 ---
 
 - **Goal**
-
   - <u>**Rationale**</u>: Represents the desired outcome or terminal state toward which one or more tasks are directed; Anchors decomposition hierarchies and provides semantics for task sequencing order
   - <u>**Connected Pattern**</u>: [description-situation](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/description-situation/description-situation-pattern.pdf), [spatiotemporal-extent](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/spatiotemporal-extent/spatiotemporal-extent-pattern.pdf), [sequence](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/sequence/sequence-pattern.pdf), [event](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/event/event-pattern.pdf)
   - <u>**Source Dataset(s)**</u>: [BridgeData V2](https://rail-berkeley.github.io/bridgedata/), [EpicKitchens](https://epic-kitchens.github.io/2025), [RH20T-P](https://sites.google.com/view/rh20t-primitive/main), [ALFRED](https://askforalfred.com/)
@@ -89,11 +87,9 @@
 ---
 
 - **Category**
-
-  - <u><b>Rationale</b></u>: Specifications to differentiate Spatial Things. Category has various subclasses, each of which will have an explicit CategorizationType, which is provided by a controlled vocabulary. 
+  - <u><b>Rationale</b></u>: Specifications to differentiate Spatial Things. Category has various subclasses, each of which will have an explicit CategorizationType, which is provided by a controlled vocabulary.
 
   - <u>**Connected Pattern**</u>:
-
     - One major pattern that may suffice is the _explicit typing_ ODP, because one is describing an object by its _type_ or _category_: [Explicit Typing](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/explicit-typing).
 
   - <u>**Source Dataset(s)**</u>: [Princeton Model Net](https://modelnet.cs.princeton.edu/#)
@@ -101,7 +97,6 @@
 ---
 
 - **Environment**
-
   - <u><b>Rationale</b></u>: Specifications to differentiate what is present/constitutes the environment in which a task is set/in which a robot(s) operates.
   - <u>**Connected Pattern**</u>:
     - Because an environment at its core consists of objects/things (zero, one, or many), all potentially related to one another, the [Part-whole (contextualized or not)](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/part-whole) may be the most appropriate.
@@ -111,7 +106,6 @@
 ---
 
 - **Object**
-
   - <u><b>Rationale</b></u>: Specifications to define a non-autonomous Spatial Thing (not functional by itself).
 
   - <u>**Connected Pattern**</u>: Most likely the _spatial object_ or even the _spatiotemporal extent_ role would capture the qualities of an object, namely, that it occupies a position in space and time. [Spatial object](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/spatial-object), [Spatialtemporal extent](https://github.com/kastle-lab/modular-ontology-design-library/tree/master/modl/spatiotemporal-extent)
@@ -121,7 +115,6 @@
 ---
 
 - **Role**
-
   - <u><b>Rationale</b></u>: Used to represent the immediate characteristics and participation of a SpatialThing in a specific context (i.e, a Task providing a Role).
   - <u>**Connected Pattern**</u>: [participant-role-pattern](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/participant-role/participant-role-pattern.pdf), [agent-role-pattern](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/agent-role/agent-role-pattern.pdf), [role-dependent-name](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/role-dependent-name/role-dependent-name-pattern.pdf)
 
@@ -130,7 +123,6 @@
 ---
 
 - **Feature**
-
   - <u><b>Rationale</b></u>: A spatial thing that only exists as part of a host object (i.e., holes, color, bumps)
 
   - <u>**Connected Pattern**</u>: [Spatial-Object-Pattern](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/spatial-object/spatial-object-pattern.pdf)
@@ -140,7 +132,6 @@
   ***
 
 - **Geometry**
-
   - <u><b>Rationale</b></u>: The geometry data of a spatial thing (i.e., mesh data, dimensions)
 
   - <u>**Connected Pattern**</u>: [Spatial-Object-Pattern](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/spatial-object/spatial-object-pattern.pdf)
@@ -150,7 +141,6 @@
 ---
 
 - **RelationInstance**
-
   - <u><b>Rationale</b></u>: Through reification, typecasting properties into subproperties of a spatial thing (i.e., component, member, place, and feature types).
 
   - <u>**Connected Pattern**</u>: [Winston's Part Whole](https://ceur-ws.org/Vol-2195/pattern_paper_1.pdf)
@@ -160,7 +150,6 @@
 ---
 
 - **SpatialThing**
-
   - <u><b>Rationale</b></u>: A physical thing that exists in time and space.
 
   - <u>**Connected Pattern**</u>: [spatial-object-pattern](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/spatial-object/spatial-object-pattern.pdf)
@@ -169,3 +158,11 @@
 
 ---
 
+- **Quantity**
+  - <u><b>Rationale</b></u>: The quantity of some thing.
+
+  - <u>**Connected Pattern**</u>: [quantity-pattern](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/quantity/quantity-pattern.pdf)
+
+  - <u>**Source Dataset(s)**</u>: All
+
+---
