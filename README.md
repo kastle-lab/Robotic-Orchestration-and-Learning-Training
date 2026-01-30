@@ -4,11 +4,13 @@
 
 - Archetype
 - Capability
-- Category
-- Environment-Object-Constitution
+- Categorization
+- Event
+- Feature
 - Goal-Task
-- SpatialThing
 - Role
+- SpatialThing
+- Specification
 
 ## Deliverables
 
