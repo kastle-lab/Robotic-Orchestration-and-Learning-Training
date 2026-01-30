@@ -158,8 +158,8 @@
 
 ---
 
-- **Quantity**
-  - <u><b>Rationale</b></u>: The quantity of some thing.
+- **Specification**
+  - <u><b>Rationale</b></u>: The specifications given for some thing (e.g., A Capability).
 
   - <u>**Connected Pattern**</u>: [quantity-pattern](https://github.com/kastle-lab/modular-ontology-design-library/blob/master/modl/quantity/quantity-pattern.pdf)
 
